@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div id="wrapper">
+        <div id="table">
+            <div class="book">
+                <p class="book-title">Gone with the Wind</p>
+                <p class="book-author">Margaret Mitchell</p>
+                <p class="book-page-count"><strong>Page Count:</strong> 1037</p>
+                <p class="book-status"><strong>Status:</strong> Read</p>
+                <button class="book-button">Remove Book</button>
+                <button class="book-status-button">Mark Read</button>
+            </div>
+
+            <div class="book">
+                <p class="book-title">The Giver</p>
+                <p class="book-author">Lois Laowry</p>
+                <p class="book-page-count"><strong>Page Count:</strong> 240</p>
+                <p class="book-status"><strong>Status:</strong> Read</p>
+                <button class="book-button">Remove Book</button>
+                <button class="book-status-button">Mark Read</button>
+            </div>
+
+            <div class="book">
+                <p class="book-title">The Outsiders</p>
+                <p class="book-author">S.E. Hinton</p>
+                <p class="book-page-count"><strong>Page Count:</strong> 192</p>
+                <p class="book-status"><strong>Status:</strong> Read</p>
+                <button class="book-button">Remove Book</button>
+                <button class="book-status-button">Mark Read</button>
+            </div>
+            
+            <div class="book">
+                <p class="book-title">Pride and Prejudice</p>
+                <p class="book-author">Jane Austen</p>
+                <p class="book-page-count"><strong>Page Count:</strong> 432</p>
+                <p class="book-status"><strong>Status:</strong> Read</p>
+                <button class="book-button">Remove Book</button>
+                <button class="book-status-button">Mark Read</button>
+            </div>
+
+            <div class="book">
+                <p class="book-title">To Kill a Mockingbird</p>
+                <p class="book-author">Harper Lee</p>
+                <p class="book-page-count"><strong>Page Count:</strong> 218</p>
+                <p class="book-status"><strong>Status:</strong> Read</p>
+                <button class="book-button">Remove Book</button>
+                <button class="book-status-button">Mark Read</button>
+            </div>
+        </div>
+
+        <button>Add Book</button>
+
+        <div id="form-container" style="background:lightgrey">
+            <form>
+                <p>Add a Book</p>
+                <div class="text-input">
+                    <label for="title">Title:</label>
+                    <input name="title" id="title" type="text">
+                </div>
+                <div class="text-input">
+                    <label for="author">Author:</label>
+                    <input name="author" id="author" type="text">
+                </div>
+                <div class="text-input">
+                    <label for="pageCount">Page Count:</label>
+                    <input name="pageCount" id="pageCount" type="text">
+                </div>
+                <div class="text-input">
+                    <legend>Status:</legend>
+                    <div class="radio-container">
+                        <div>
+                            <input type="radio" id="read" name="readStatus" value="Read" checked>
+                            <label for="read"> Read</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="unread" name="readStatus" value="Unread">
+                            <label for="unread"> Unread</label>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="Add Book" />
+            </form>
+        </div>
+    </div>
+
+    
+</body>
+</html>

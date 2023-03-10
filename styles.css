@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    background:black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:14pt;
+}
+
+#wrapper{
+    border:solid white 2px;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+#table {
+    width:85%;
+    margin:auto;
+    padding:2rem;
+    background: rgb(134, 75, 41);
+    display:grid;
+    grid-template-columns: repeat(5,minmax(150px, 200px));
+    gap:20px;
+    justify-content:center;
+}
+
+.book{
+    background:#20db79;
+    height:250px;
+    padding-left:25px;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:flex-start;
+    align-content:center;;
+}
+
+p{
+    margin:0;
+    width:100%;
+}
+
+.book-title{
+    font-size:1.4rem;
+    font-weight:bold;
+    font-family:'Luminari','didot', serif;
+    line-height:1.1;
+}
+
+.book-author{
+    font-family:sans-serif;
+    font-size: 1rem;
+    font-weight:100;
+    margin-bottom: 15px;
+}
+
+.book-page-count, .book-status {
+    font-size: 0.8rem;
+}
+
+.book-button{
+    margin-top:15px;
+    border:none;
+    background: #2e75ba;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+    outline:none;
+}
+
+.book-status-button {
+    margin-top: 10px;
+    border: none;
+    background: #870684;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+    outline:none;
+}
+
+#form-container{
+    width: 35%;
+    padding: 1.5rem 2rem;
+}
+
+#form-container form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#form-container form p{
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.text-input{
+    display: grid;
+    gap:5px;
+    font-size: 0.9rem;
+}
+
+.radio-container{
+    display: flex;
+    column-gap: 20px;
+    font-size:1rem;
+}
