@@ -3,33 +3,52 @@
 }
 
 body{
-    background:black;
     font-family: Arial, Helvetica, sans-serif;
     font-size:14pt;
 }
 
+button{
+    cursor:pointer;
+}
+
 #wrapper{
-    border:solid white 2px;
-    height: 100vh;
+    background:lightgrey;
+    min-height: 100vh;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap:25px;
+    padding:25px 0;
 }
 
 #table {
     width:85%;
-    margin:auto;
     padding:2rem;
-    background: rgb(134, 75, 41);
+    background: rgb(187 129 95);
     display:grid;
     grid-template-columns: repeat(5,minmax(150px, 200px));
     gap:20px;
     justify-content:center;
 }
 
+
+.table::after {
+    content: "";
+    background: darkslategrey;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .book{
-    background:#20db79;
+    background:darkslategrey;
+    color:white;
     height:250px;
     padding-left:25px;
     display:flex;
@@ -71,6 +90,11 @@ p{
     outline:none;
 }
 
+.book-button:hover {
+    background: #c9ffff;
+    color: #2e75ba;
+}
+
 .book-status-button {
     margin-top: 10px;
     border: none;
@@ -81,31 +105,121 @@ p{
     outline:none;
 }
 
+.book-status-button:hover {
+    background: #e6e7fa;
+    color: #870684;
+}
+
+#addBookButton{
+    border: none;
+    background: darkslategrey;
+    color:white;
+    border-radius: 5px;
+    padding: 10px 25px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-weight:bold;
+    font-size:1.2rem;
+    font-family:sans-serif;
+}
+
+#addBookButton:hover {
+    background: white;
+    color:darkslategrey;
+    border:solid 2px darkslategrey;
+}
+
 #form-container{
     width: 35%;
     padding: 1.5rem 2rem;
+    position:fixed;
+    display:none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #form-container form{
     display: flex;
     flex-direction: column;
     gap: 15px;
+    padding: 1.5rem 2rem;
+    background:lightgrey;
 }
 
 #form-container form p{
     font-size: 1.3rem;
     font-weight: 700;
     text-align: center;
+    color:darkslategrey;
 }
 
 .text-input{
     display: grid;
     gap:5px;
     font-size: 0.9rem;
+    color: darkslategrey;
+    font-weight: bold;
+}
+
+.text-input input[type="text"]{
+    border:none;
+    height: 25px;
+}
+
+.text-input input:focus {
+    border:darkslategrey solid 1px;
+    outline:none;
+}
+
+.invalidInput:invalid {
+    border: red solid 1px;
+    outline: none;
 }
 
 .radio-container{
     display: flex;
     column-gap: 20px;
     font-size:1rem;
+    font-weight: 500;
+    color: #4c4c4c;
+}
+
+input[type="radio"]{
+    visibility:hidden;
+}
+
+input[type="radio"]::before {
+    content: "";
+    background:center / contain no-repeat url("images/radio-button-unchecked.png");
+    display:block;
+    width:15px;
+    height:13px;
+    visibility:visible;
+}
+
+input[type="radio"]:checked::before {
+    content: "";
+    background: center / contain no-repeat url("images/radio-button-checked.png");
+    display: block;
+    width: 15px;
+    height: 13px;
+    visibility: visible;
+}
+
+#submit-button{
+    background: darkslategrey;
+    border: none;
+    padding: 10px;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+#submit-button:hover {
+    background: white;
+    color: darkslategrey;
 }
